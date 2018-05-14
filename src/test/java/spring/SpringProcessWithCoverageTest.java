@@ -4,12 +4,15 @@ import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.test.Deployment;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.test.context.ContextConfiguration;
+import spring.config.DummyConfig;
 
 import java.util.HashMap;
 import java.util.Map;
 
 
 @Deployment(resources="process2.bpmn")
+@ContextConfiguration(classes = DummyConfig.class)
 public class SpringProcessWithCoverageTest extends AbstractCamundaTest {
 
   @Test
