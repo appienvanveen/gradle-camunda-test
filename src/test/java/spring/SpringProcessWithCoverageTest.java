@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-@Deployment(resources="process.bpmn")
+@Deployment(resources="process2.bpmn")
 public class SpringProcessWithCoverageTest extends AbstractCamundaTest {
 
   @Test
@@ -17,7 +17,7 @@ public class SpringProcessWithCoverageTest extends AbstractCamundaTest {
 
     Map<String, Object> variables = new HashMap<String, Object>();
     variables.put("path", "A");
-    final ProcessInstance processInstance = processEngine.getRuntimeService().startProcessInstanceByKey("process-test-coverage", variables);
+    final ProcessInstance processInstance = processEngine.getRuntimeService().startProcessInstanceByKey("process-test-coverage2", variables);
 
     Assert.assertNotNull(processInstance);
     Assert.assertTrue(processInstance.isEnded());
@@ -28,7 +28,7 @@ public class SpringProcessWithCoverageTest extends AbstractCamundaTest {
 
     Map<String, Object> variables = new HashMap<String, Object>();
     variables.put("path", "A");
-    final ProcessInstance processInstance = processEngine.getRuntimeService().startProcessInstanceByKey("process-test-coverage", variables);
+    final ProcessInstance processInstance = processEngine.getRuntimeService().startProcessInstanceByKey("process-test-coverage2", variables);
 
     Assert.assertNotNull(processInstance);
     Assert.assertTrue(processInstance.isEnded());

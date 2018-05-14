@@ -24,8 +24,7 @@ public abstract class AbstractCamundaTest {
     protected ProcessInstance processInstance;
 
     @Rule
-    @ClassRule
-    public static ProcessEngineRule rule;
+    public  ProcessEngineRule rule;
 
     @PostConstruct
     void initRule() {
