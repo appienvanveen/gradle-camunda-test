@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'nl.kmpg.dummy'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile('org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter:2.3.0')
+    testCompile('org.camunda.bpm.extension:camunda-bpm-assert:1.2')
+    testCompile('org.camunda.bpm.extension:camunda-bpm-assert-scenario:0.2')
+    testCompile('org.camunda.bpm.extension:camunda-bpm-process-test-coverage:0.3.2')
+// https://mvnrepository.com/artifact/org.springframework/spring-test
+    testCompile group: 'org.springframework', name: 'spring-test', version: '4.3.13.RELEASE'
+// https://mvnrepository.com/artifact/com.h2database/h2
+    testCompile group: 'com.h2database', name: 'h2', version: '1.4.197'
+
+}
